@@ -1,0 +1,21 @@
+# tetris-deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ngnixdeployment
+spec:
+  replicas: 1 # You can adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: tetris
+          image: nginx # Replace with the actual image tag
+          ports:
+            - containerPort: 80 # Replace with the port your Tetris game listens on
