@@ -3,7 +3,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tetris-deployment
+  name: dep-alp
 spec:
   replicas: 1 # You can adjust the number of replicas as needed
   selector:
